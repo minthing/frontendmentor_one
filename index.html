@@ -10,21 +10,173 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      position:relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #000;
+    }
+    .wrap_cont{
+      display: flex;
+      height:445px;
+      width: 1132px;
+      margin: 0 auto;
+      border-radius: 2%;
+      background:hsl(244, 38%, 16%);
+      color:#fff;
+    }
+
+    .wrap{
+      display: flex;
+      min-width: 100vw;
+      min-height:100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section{
+      width:50%;
+    }
+
+    .section.left{
+      padding-left:50px;
+      padding-top:45px;
+    }
+
+    .section > h1{
+      font-size:2em;
+      width: 80%;
+    }
+
+    .section em{
+      font-style: normal;
+      color:#ab5cdb;
+    }
+
+    .section p{
+      width:80%;
+      padding:10px 0 10px 0;
+      color:rgb(191, 191, 191);
+      font-size:1.2em;
+    }
+
+    .section.left ul{
+      display: flex;
+      width:77%;
+      margin-top: 75px;
+      padding:0;
+      list-style: none;
+    }
+
+    .section.left li{
+      width:30%;
+      color:rgb(191, 191, 191)
+    }
+
+    .section.left li strong{
+      display: block;
+      font-size:1.5em;
+      color:#fff;
+    }
+
+    .section.right{
+      background-repeat: no-repeat;
+      border-radius: 0 2% 2% 0;
+    }
+
+    .attribution {
+      overflow: scroll;
+      display: block;
+      position: absolute;
+      width:100vw;
+      bottom: 10px;
+      flex-direction: row;
+      font-size: 11px;
+      text-align: center;
+      color: whitesmoke;
+      }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      }
+
+    @media screen and (max-width: 1150px) {
+      .wrap_cont{
+        margin:0 10px 0 10px ;
+      }
+    }
+    
+    @media screen and (max-width: 931px) {
+      .section.left ul{
+        margin-top:2vw;
+      }
+    }
+
+    @media screen and (min-width: 701px) {
+      .section.right{
+        background:linear-gradient(rgba(171,92,219, 0.7), rgba(171,92,219, 0.7)), url(./images/image-header-desktop.jpg);
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .wrap_cont{
+        display: flex;
+        flex-direction: column-reverse;
+        width:90%;
+        height:100%;
+        margin:30px 0 50px 0;
+      }
+
+      .section{
+        width:100%;
+      }
+
+      .section.left{
+        padding-left: 10%;
+        text-align: center;
+        padding-top:40px;
+        padding-bottom: 20px;
+      }
+
+      .section.left ul{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section.left li{
+        width:auto
+      }
+
+      .section.right{
+        height:300px;
+        background:linear-gradient(rgba(171,92,219, 0.7), rgba(171,92,219, 0.7)), url(./images/image-header-mobile.jpg);
+        border-radius: 2% 2% 0 0;
+      }
+    }
+
+
   </style>
 </head>
 <body>
+<div class="wrap">
+  <div class="wrap_cont">
+    <div class="section left">
+      <h1>Get <em>insights</em> that help your business grow.</h1>
 
-  Get insights that help your business grow.
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.</p>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+      <ul>
+        <li><strong>10k+</strong> companies</li>
+        <li><strong>314</strong> templates</li>
+        <li><strong>12m+</strong> queries</li>
+      </ul>
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
+    </div>
+    <div class="section right">
+    </div>
+  </div>
+</div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
