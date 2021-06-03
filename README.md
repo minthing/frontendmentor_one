@@ -2,6 +2,9 @@
 
 ![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
+### 완료 페이지
+https://minthingfrontendmentorone.netlify.app/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
